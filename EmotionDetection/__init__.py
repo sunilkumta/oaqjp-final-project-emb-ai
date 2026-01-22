@@ -1,2 +1,2 @@
-from emotion_detection import EmotionDetection
-from emotion_response import EmotionResponse
+from .emotion_detection import EmotionDetection
+from .emotion_response import EmotionResponse
