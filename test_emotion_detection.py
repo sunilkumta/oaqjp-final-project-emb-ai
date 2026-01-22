@@ -1,8 +1,8 @@
 """Unit tests for EmotionDetection class"""
 import unittest
 import json
-from emotion_detection import EmotionDetection
-from emotion_response import EmotionResponse
+from EmotionDetection import EmotionDetection
+from EmotionDetection import EmotionResponse
 
 
 class TestEmotionDetection(unittest.TestCase):
