@@ -161,14 +161,20 @@ class TestEmotionDetection(unittest.TestCase):
         self.assertEqual(emotions["dominant_emotion"], "disgust")
 
     def test_emotion_response_error_handling(self):
-        """Test EmotionResponse raises exception for empty text"""
+        """Test EmotionResponse sets all emotions to None for empty text"""
         text = ""
         result = self.detector.emotion_detector(text)
+        response = EmotionResponse(result)
 
-        with self.assertRaises(Exception) as context:
-            response = EmotionResponse(result)
+        emotions = response.emotions()
 
-        self.assertIn("Exception raised during inference", str(context.exception))
+        # All emotions should be None when there's an error
+        self.assertIsNone(emotions['anger'])
+        self.assertIsNone(emotions['disgust'])
+        self.assertIsNone(emotions['fear'])
+        self.assertIsNone(emotions['joy'])
+        self.assertIsNone(emotions['sadness'])
+        self.assertIsNone(emotions['dominant_emotion'])
 
 
 if __name__ == '__main__':
