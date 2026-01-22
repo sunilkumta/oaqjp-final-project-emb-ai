@@ -8,6 +8,7 @@ class EmotionResponse:
         self.result_json = json.loads(result_text)
 
     #some changes
+    #more changes
     def emotion(self):
         """return emotion"""
         return "self.result_json"
