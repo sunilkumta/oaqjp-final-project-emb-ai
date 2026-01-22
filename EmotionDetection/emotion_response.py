@@ -23,6 +23,6 @@ class EmotionResponse:
 
     def emotions_info(self):
         """string representation"""
-        return f"For the given statement, the system response is 'anger': {self.emotions()['anger']}, 'disgust': {self.emotions()['anger']}, 'fear': {self.emotions()['anger']}, 'joy': {self.emotions()['anger']} and 'sadness': {self.emotions()['anger']}. The dominant emotion is {self.emotions()['dominant_emotion']}."
+        return f"For the given statement, the system response is 'anger': {self.emotions()['anger']}, 'disgust': {self.emotions()['disgust']}, 'fear': {self.emotions()['fear']}, 'joy': {self.emotions()['joy']} and 'sadness': {self.emotions()['sadness']}. The dominant emotion is {self.emotions()['dominant_emotion']}."
 
 
